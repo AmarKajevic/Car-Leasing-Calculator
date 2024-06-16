@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.calculator {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 8px;
+    background: #007bff;
+    border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    height: 20px;
+    width: 20px;
+    background: #007bff;
+    border-radius: 50%;
+    margin-top: -6px;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-track {
+    height: 8px;
+    background: #007bff;
+    border-radius: 5px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type="range"]::-ms-fill-lower {
+    background: #007bff;
+    border-radius: 5px;
+}
+
+input[type="range"]::-ms-fill-upper {
+    background: #007bff;
+    border-radius: 5px;
+}
+
+.separator {
+    border-top: 2px solid #ccc;
+    margin: 20px 0;
+}
+
+.results {
+    display: flex;
+    text-align: center;
+    position: relative;
+}
+
+.left-column,
+.right-column {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    text-align: left;
+}
+
+.left-column {
+    margin-right: 5%;
+}
+
+.right-column {
+    margin-left: 5%;
+}
+
+.vertical-separator {
+    display: inline-block;
+    border-left: 2px solid #000;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+    .form-row {
+        display: block;
+    }
+
+    .form-group {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .results {
+        display: block;
+        text-align: left;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+        margin: 0 0 10px 0; 
+    }
+
+    .vertical-separator {
+        display: none;
+    }
+
+    #results p {
+        text-align: left;
+        margin-bottom: 10px; 
+    }
+}

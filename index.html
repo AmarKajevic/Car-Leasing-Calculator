@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Leasing Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h2>Car Leasing Calculator</h2>
+        <form id="leasingForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="carType">Car Type:</label>
+                    <select id="carType" name="carType">
+                        <option value="new">Brand New</option>
+                        <option value="used">Used</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="leasePeriod">Leasing Period:</label>
+                    <select id="leasePeriod" name="leasePeriod">
+                        <option value="12">12 months</option>
+                        <option value="24">24 months</option>
+                        <option value="36">36 months</option>
+                        <option value="48">48 months</option>
+                        <option value="60">60 months</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="carValue">Car Value (€10,000 - €200,000):</label>
+                    <input type="number" id="carValue" name="carValue" min="10000" max="200000" step="1000">
+                    <input type="range" id="carValueRange" name="carValueRange" min="10000" max="200000" step="1000">
+                </div>
+                <div class="form-group">
+                    <label for="downPaymentRange">Down Payment (10% - 50%):</label>
+                    <input type="number" id="downPaymentInput" name="downPaymentInput" min="10" max="50" step="5">
+                    <input type="range" id="downPaymentRange" name="downPaymentRange" min="10" max="50" step="5">
+                </div>
+            </div>
+        </form>
+        <div class="separator"></div>
+        <h3>Leasing Summary</h3>
+        <div class="results">
+            <div class="left-column">
+                <p id="totalLeasingCost">Total Leasing Cost:</p>
+                <p id="downPaymentPercentage">Down Payment (%):</p>
+            </div>
+            <div class="vertical-separator"></div>
+            <div class="right-column">
+                <p id="monthlyInstallment">Monthly Installment:</p>
+                <p id="interestRate">Interest Rate:</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
